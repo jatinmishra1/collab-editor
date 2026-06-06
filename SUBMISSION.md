@@ -7,15 +7,15 @@
 
 ## What is included
 
-| File / Folder | Description |
-|---|---|
-| `backend/` | FastAPI backend — models, routers, database, schemas |
-| `frontend/` | React + Vite frontend — editor, sharing, sidebar |
-| `README.md` | Local setup and run instructions |
-| `ARCHITECTURE.md` | What was prioritised and why, data model, API surface, deployment |
-| `AI_WORKFLOW.md` | AI tools used, what was changed/rejected, verification approach |
-| `SUBMISSION.md` | This file |
-| `backend/tests/test_documents.py` | Automated backend tests |
+| File / Folder                     | Description                                                       |
+| --------------------------------- | ----------------------------------------------------------------- |
+| `backend/`                        | FastAPI backend — models, routers, database, schemas              |
+| `frontend/`                       | React + Vite frontend — editor, sharing, sidebar                  |
+| `README.md`                       | Local setup and run instructions                                  |
+| `ARCHITECTURE.md`                 | What was prioritised and why, data model, API surface, deployment |
+| `AI_WORKFLOW.md`                  | AI tools used, what was changed/rejected, verification approach   |
+| `SUBMISSION.md`                   | This file                                                         |
+| `backend/tests/test_documents.py` | Automated backend tests                                           |
 
 ---
 
@@ -34,13 +34,13 @@
 
 ## What is intentionally out of scope
 
-| Feature | Reason not built |
-|---|---|
-| Real authentication / JWT | Scope; user picker + seeded accounts demonstrates the sharing logic cleanly |
-| Real-time collaboration cursors | Requires WebSocket infrastructure (~3–4 hours extra) |
-| `.docx` import | Requires `python-docx` + HTML conversion; `.txt`/`.md` covers the requirement |
-| Version history | Stretch goal; core features prioritised |
-| Role-based permissions (editor vs viewer) | Beyond "basic access" requirement |
+| Feature                                   | Reason not built                                                              |
+| ----------------------------------------- | ----------------------------------------------------------------------------- |
+| Real authentication / JWT                 | Scope; user picker + seeded accounts demonstrates the sharing logic cleanly   |
+| Real-time collaboration cursors           | Requires WebSocket infrastructure (~3–4 hours extra)                          |
+| `.docx` import                            | Requires `python-docx` + HTML conversion; `.txt`/`.md` covers the requirement |
+| Version history                           | Stretch goal; core features prioritised                                       |
+| Role-based permissions (editor vs viewer) | Beyond "basic access" requirement                                             |
 
 ---
 
@@ -56,13 +56,14 @@
 
 ## Test accounts for reviewing sharing
 
-| User | Email | Password |
-|---|---|---|
-| Alice | alice@example.com | *(no password — click to select)* |
-| Bob | bob@example.com | *(no password — click to select)* |
-| Carol | carol@example.com | *(no password — click to select)* |
+| User  | Email             | Password                          |
+| ----- | ----------------- | --------------------------------- |
+| Alice | alice@example.com | _(no password — click to select)_ |
+| Bob   | bob@example.com   | _(no password — click to select)_ |
+| Carol | carol@example.com | _(no password — click to select)_ |
 
 **Suggested review flow:**
+
 1. Select **Alice** → create a document → click **Share** → enter `bob@example.com`
 2. Select **Bob** → see the document under "Shared with me" → confirm it is read-only
 3. Select **Alice** → click Share → remove Bob
@@ -72,8 +73,13 @@
 
 ## Live deployment URL
 
-> *(to be added after deployment — see ARCHITECTURE.md for deployment steps)*
+- **Frontend**: https://collab-editor-six-rho.vercel.app
+- **Backend API**: https://collab-editor-backend-y6q2.onrender.com/docs
+
+## GitHub repository (optional)
+
+https://github.com/jatinmishra1/collab-editor
 
 ## Walkthrough video
 
-> *(to be added — unlisted YouTube / Loom link)*
+https://drive.google.com/file/d/1Y7S_pDIlRe6Fez9GaeB01KkSzB1CivXT/view?usp=sharing
