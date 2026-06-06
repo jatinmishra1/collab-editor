@@ -15,7 +15,7 @@ def get_documents(user_email: str = Query(...), db: Session = Depends(get_db)):
     shared = db.query(models.Document).filter(models.Document.id.in_(shared_ids)).all()
     return owned + shared
 
-@router.post("/", response_model=schemas.Document)
+@router.post("", response_model=schemas.Document)
 def create_document(doc: schemas.DocumentCreate, db: Session = Depends(get_db)):
     user = db.query(models.User).filter(models.User.email == doc.owner_email).first()
     if not user:
