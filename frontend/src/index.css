@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+.ProseMirror {
+  outline: none;
+  min-height: 200px;
+  padding: 1rem;
+}
+.ProseMirror p {
+  margin-bottom: 0.5rem;
+}
+.ProseMirror h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+.ProseMirror h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+/* Prevent button layout shift when "Saving..." appears */
+div.flex.gap-2 {
+  min-width: 120px;
+  justify-content: flex-end;
+}
+
+button {
+  transition: background-color 0.15s ease;
+}
+
+/* Ensure the editor container doesn't cause reflow */
+.ProseMirror {
+  overflow-y: auto;
+}
